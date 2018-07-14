@@ -23,6 +23,9 @@ def GenerateSet(points, center):
 
 # Compute RGB colors for a labels 
 def Paint(x):
+    if x == -1:
+        return 'r'
+    
     r = int((100000 * np.abs(np.tan(x))) % 256)
     g = int((100000 * np.abs(np.sin(x))) % 256)
     b = int((100000 * np.abs(np.cos(x))) % 256)
